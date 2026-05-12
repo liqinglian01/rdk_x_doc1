@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrdk_doc=self.webpackChunkrdk_doc||[]).push([[2634],{192:(e,s,r)=>{r.r(s),r.d(s,{default:()=>u});var a=r(6540),c=r(6347),h=r(4586);function u(){const e=(0,c.W6)(),s=(0,c.zy)(),{siteConfig:r}=(0,h.A)();return(0,a.useEffect)(()=>{e.replace(`${r.baseUrl}RDK${s.search}${s.hash}`)},[e,s.search,s.hash,r.baseUrl]),null}}}]);

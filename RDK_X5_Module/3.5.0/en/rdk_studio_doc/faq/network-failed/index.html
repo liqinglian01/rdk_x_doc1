@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5.7 WiFi 连接失败 | RDK Studio DOC</title>
+  </head>
+  <body>
+    <article>
+      <h1 id="pf-0">5.7 WiFi 连接失败 | RDK Studio DOC</h1>
+      <p id="pf-1"><a href="https://developer.d-robotics.cc/rdk_studio_doc/faq/network-failed" rel="noreferrer">查看原文</a></p>
+      <p id="pf-2">5.7 WiFi 连接失败 | RDK Studio DOC 跳到主要内容 D-Robotics RDK Studio Community GitHub CN CN EN 1. 产品简介 2. 快速入门 3. 用户指南 4. 资源与社区 5. 常见问题 5.1 AI 助手无响应 5.2 SSH 连接失败 5.3 Type-C 闪连失败 5.4 USB 摄像头无图像 5.5 hbm 模型无法加载 5.6 OpenClaw 安装失败 5.7 WiFi 连接失败 5.8 远程 IDE 无法启动 5.9 多设备切换异常 5.10 Token 用量异常 5.11 模型回答质量问题 5.12 远程桌面连接或卡顿 5. 常见问题 5.7 WiFi 连接失败 本页总览 5.7 WiFi 连接失败 典型现象 ：在 WiFi 配置 弹窗输入 SSID 和密码后连接失败 / 连接显示成功但 ip addr 看 wlan0 没拿到 IP / 重启后 WiFi 配置丢失</p>
+<p id="pf-3">30 秒决策 ​ 板端跑这三行，定位是哪一步坏的： nmcli dev status # WiFi 模块是否正常 nmcli dev wifi list # 能否扫到目标 SSID nmcli dev wifi connect "目标SSID" password "密码" # 手动连 排查清单 ​ SSID 扫描 — nmcli dev wifi list 看不到目标网络时： 信号弱（&lt; -70 dBm）靠近路由器 5 GHz only 路由器 + 板端只有 2.4 GHz 模块 → 换路由器或开 2.4 GHz 隐藏 SSID： nmcli dev wifi connect "SSID" password "密码" hidden yes 密码错误 — nmcli 不会直接告诉你，会以 Error: Connection activation failed 笼统报错</p>
+<p id="pf-4">手动重试注意大小写 DHCP 失败 — 连上但没 IP： sudo dhclient wlan0 # 或 sudo systemctl restart NetworkManager 驱动问题 — RDK X3 / X5 偶发 WiFi 模块需重新加载： sudo rmmod 8852be sudo modprobe 8852be 模块名按 lsmod | grep 88 查 永久解决 ​ 在 WiFi 配置 弹窗勾"保存配置"，Studio 下发到板端 NetworkManager 持久化 重启就丢一般是板端 NetworkManager 未自启： sudo systemctl enable NetworkManager 长期生产环境推荐 网线 + 静态 IP 最后 于 2026年4月30日 更新 上一页 5.6 OpenClaw 安装失败 下一页 5.8 远程 IDE 无法启动 30 秒决策 排查清单 永久解决 友情链接 古月居 联系我们 GitHub BiLiBiLi Copyright © 2026 D-Robotics.</p>
+    </article>
+  
+
+
+    <div hidden="" data-pagefind-body="">
+      连 接 失 败 连接 接失 失败 查 看 原 文 查看 看原 原文 连 接 失 败 连接 接失 失败 跳 到 主 要 内 容 跳到 到主 主要 要内 内容 产 品 简 介 产品 品简 简介 快 速 入 门 快速 速入 入门 用 户 指 南 用户 户指 指南 资 源 与 社 区 资源 源与 与社 社区 常 见 问 题 常见 见问 问题 助 手 无 响 应 助手 手无 无响 响应 连 接 失 败 连接 接失 失败 闪 连 失 败 闪连 连失 失败 摄 像 头 无 图 像 摄像 像头 头无 无图 图像 模 型 无 法 加 载 模型 型无 无法 法加 加载 安 装 失 败 安装 装失 失败 连 接 失 败 连接 接失 失败 远 程 远程 无 法 启 动 无法 法启 启动 多 设 备 切 换 异 常 多设 设备 备切 切换 换异 异常 用 量 异 常 用量 量异 异常 模 型 回 答 质 量 问 题 模型 型回 回答 答质 质量 量问 问题 远 程 桌 面 连 接 或 卡 顿 远程 程桌 桌面 面连 连接 接或 或卡 卡顿 常 见 问 题 常见 见问 问题 连 接 失 败 连接 接失 失败 本 页 总 览 本页 页总 总览 连 接 失 败 连接 接失 失败 典 型 现 象 典型 型现 现象 在 配 置 配置 弹 窗 输 入 弹窗 窗输 输入 和 密 码 后 连 接 失 败 和密 密码 码后 后连 连接 接失 失败 连 接 显 示 成 功 但 连接 接显 显示 示成 成功 功但 看 没 拿 到 没拿 拿到 重 启 后 重启 启后 配 置 丢 失 配置 置丢 丢失 秒 决 策 秒决 决策 板 端 跑 这 三 行 板端 端跑 跑这 这三 三行 定 位 是 哪 一 步 坏 的 定位 位是 是哪 哪一 一步 步坏 坏的 模 块 是 否 正 常 模块 块是 是否 否正 正常 能 否 扫 到 目 标 能否 否扫 扫到 到目 目标 目 标 目标 密 码 密码 手 动 连 手动 动连 排 查 清 单 排查 查清 清单 扫 描 扫描 看 不 到 目 标 网 络 时 看不 不到 到目 目标 标网 网络 络时 信 号 弱 信号 号弱 靠 近 路 由 器 靠近 近路 路由 由器 路 由 器 路由 由器 板 端 只 有 板端 端只 只有 模 块 模块 换 路 由 器 或 开 换路 路由 由器 器或 或开 隐 藏 隐藏 密 码 密码 密 码 错 误 密码 码错 错误 不 会 直 接 告 诉 你 不会 会直 直接 接告 告诉 诉你 会 以 会以 笼 统 报 错 笼统 统报 报错 手 动 重 试 注 意 大 小 写 手动 动重 重试 试注 注意 意大 大小 小写 失 败 失败 连 上 但 没 连上 上但 但没 或 驱 动 问 题 驱动 动问 问题 偶 发 偶发 模 块 需 重 新 加 载 模块 块需 需重 重新 新加 加载 模 块 名 按 模块 块名 名按 查 永 久 解 决 永久 久解 解决 在 配 置 配置 弹 窗 勾 弹窗 窗勾 保 存 配 置 保存 存配 配置 下 发 到 板 端 下发 发到 到板 板端 持 久 化 持久 久化 重 启 就 丢 一 般 是 板 端 重启 启就 就丢 丢一 一般 般是 是板 板端 未 自 启 未自 自启 长 期 生 产 环 境 推 荐 长期 期生 生产 产环 环境 境推 推荐 网 线 网线 静 态 静态 最 后 最后 于 年 月 日 更 新 更新 上 一 页 上一 一页 安 装 失 败 安装 装失 失败 下 一 页 下一 一页 远 程 远程 无 法 启 动 无法 法启 启动 秒 决 策 秒决 决策 排 查 清 单 排查 查清 清单 永 久 解 决 永久 久解 解决 友 情 链 接 友情 情链 链接 古 月 居 古月 月居 联 系 我 们 联系 系我 我们
+    </div>
+  </body></html>
