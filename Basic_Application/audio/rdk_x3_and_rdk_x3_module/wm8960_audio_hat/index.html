@@ -7,9 +7,9 @@
 <meta name="algolia-site-verification" content="7D2FA77E12885A7C">
 <script src="https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e" async=""></script>
 <script src="/rdk_x_doc/js/dify-config.js"></script>
-<script src="https://rdk.d-robotics.cc/embed.min.js" id="MltLQTHPb5EeP7uz" defer="defer"></script><link rel="stylesheet" href="/rdk_x_doc1/assets/css/styles.08fb43d2.css">
-<script src="/rdk_x_doc1/assets/js/runtime~main.6d77775e.js" defer="defer"></script>
-<script src="/rdk_x_doc1/assets/js/main.9139e5a5.js" defer="defer"></script>
+<script src="https://rdk.d-robotics.cc/embed.min.js" id="MltLQTHPb5EeP7uz" defer="defer"></script><link rel="stylesheet" href="/rdk_x_doc1/assets/css/styles.e8fbf916.css">
+<script src="/rdk_x_doc1/assets/js/runtime~main.01ca6f92.js" defer="defer"></script>
+<script src="/rdk_x_doc1/assets/js/main.8818695c.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -26,95 +26,97 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-34">硬件部署<a href="#硬件部署" class="hash-link" aria-label="硬件部署的直接链接" title="硬件部署的直接链接">​</a></h3>
 </li>
 </ul>
-<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active" id="pf-35">RDK-X3-PI</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP" id="pf-36">RDK-X3-Module</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><ol>
-<li id="pf-37">按照下图方式，将转接板接入 RDK X3 的 40pin header。<br>
+<div class="doc-scope" data-doc-scope="{&quot;versions&quot;:[{&quot;operator&quot;:&quot;>=&quot;,&quot;version&quot;:&quot;3.0.0&quot;}],&quot;products&quot;:[&quot;RDK X3&quot;]}"><ol>
+<li id="pf-35">按照下图方式，将转接板接入 RDK X3 的 40pin header。<br>
 <img decoding="async" loading="lazy" src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/02_audio/image/image-wm8960-audio-hat-setup.jpg" alt="image-wm8960-audio-hat-setup" class="img_ev3q"></li>
-</ol></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><ol>
-<li id="pf-38">按照下图方式，将转接板接入 RDK X3 的 40pin header。<br>
+</ol></div>
+<div class="doc-scope" data-doc-scope="{&quot;versions&quot;:[{&quot;operator&quot;:&quot;>=&quot;,&quot;version&quot;:&quot;3.0.0&quot;}],&quot;products&quot;:[&quot;RDK X3 Module&quot;]}"><ol>
+<li id="pf-36">按照下图方式，将转接板接入 RDK X3 的 40pin header。<br>
 <img decoding="async" loading="lazy" src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/02_audio/image/image-x3md-wm8960.png" alt="image-x3md-wm8960" class="img_ev3q"></li>
-</ol></div></div></div>
+</ol></div>
 <ul>
-<li id="pf-39">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-40">软件配置<a href="#软件配置" class="hash-link" aria-label="软件配置的直接链接" title="软件配置的直接链接">​</a></h3>
+<li id="pf-37">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-38">软件配置<a href="#软件配置" class="hash-link" aria-label="软件配置的直接链接" title="软件配置的直接链接">​</a></h3>
 </li>
 </ul>
 <ol start="2">
-<li id="pf-41">
-<p id="pf-42">使用 <code>srpi-config</code> 配置音频板<br>
+<li id="pf-39">
+<p id="pf-40">使用 <code>srpi-config</code> 配置音频板<br>
 <!-- -->进入 <code>3 Interface Options</code>-&gt;<code>I5 Audio</code><br>
 <!-- -->选择 <code>WM8960 Audio HAT</code>：
 <img decoding="async" loading="lazy" src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/03_Basic_Application/02_audio/image/image-audio-driver-hat-config01.png" alt="image-audio-driver-hat-config00" class="img_ev3q"></p>
 </li>
-<li id="pf-43">
-<p id="pf-44">运行命令 <code>sync &amp;&amp; reboot</code> 重启开发板，如 <code>ls /dev/snd</code> 下出现如下设备节点，说明转接板安装成功</p>
+<li id="pf-41">
+<p id="pf-42">运行命令 <code>sync &amp;&amp; reboot</code> 重启开发板，如 <code>ls /dev/snd</code> 下出现如下设备节点，说明转接板安装成功</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">root@ubuntu:~# ls /dev/snd/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">by-path  controlC0  pcmC0D0c  pcmC0D0p  pcmC0D1c  pcmC0D1p  timer</span><br></span></code></pre></div></div>
 </li>
 </ol>
-<p id="pf-45">该音频板在 <code>RDK X3</code> 上的的播放节点为 <code>pcmC0D0p</code>，录制节点为 <code>pcmC0D1c</code></p>
+<p id="pf-43">该音频板在 <code>RDK X3</code> 上的的播放节点为 <code>pcmC0D0p</code>，录制节点为 <code>pcmC0D1c</code></p>
 <ul>
-<li id="pf-46">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-47">卸载方法<a href="#卸载方法" class="hash-link" aria-label="卸载方法的直接链接" title="卸载方法的直接链接">​</a></h3>
+<li id="pf-44">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-45">卸载方法<a href="#卸载方法" class="hash-link" aria-label="卸载方法的直接链接" title="卸载方法的直接链接">​</a></h3>
 </li>
 </ul>
 <ol>
-<li id="pf-48">
-<p id="pf-49">使用 <code>srpi-config</code> 配置音频板<br>
+<li id="pf-46">
+<p id="pf-47">使用 <code>srpi-config</code> 配置音频板<br>
 <!-- -->进入 <code>3 Interface Options</code>-&gt;<code>I5 Audio</code><br>
 <!-- -->选择 <code>UNSET</code>, 即可卸载音频驱动和相关配置</p>
 </li>
-<li id="pf-50">
-<p id="pf-51">将载板拔掉。</p>
+<li id="pf-48">
+<p id="pf-49">将载板拔掉。</p>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pf-52">运行<a href="#运行" class="hash-link" aria-label="运行的直接链接" title="运行的直接链接">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-53">1. 检查声卡设备<a href="#1-检查声卡设备" class="hash-link" aria-label="1. 检查声卡设备的直接链接" title="1. 检查声卡设备的直接链接">​</a></h3>
-<p id="pf-54">首先，确认声卡是否被系统正确识别和注册。</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pf-50">运行<a href="#运行" class="hash-link" aria-label="运行的直接链接" title="运行的直接链接">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-51">1. 检查声卡设备<a href="#1-检查声卡设备" class="hash-link" aria-label="1. 检查声卡设备的直接链接" title="1. 检查声卡设备的直接链接">​</a></h3>
+<p id="pf-52">首先，确认声卡是否被系统正确识别和注册。</p>
 <ul>
-<li id="pf-55">
-<p id="pf-56">查看已注册的声卡列表：</p>
+<li id="pf-53">
+<p id="pf-54">查看已注册的声卡列表：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cat /proc/asound/cards</span><br></span></code></pre></div></div>
-<p id="pf-57">输出示例：</p>
+<p id="pf-55">输出示例：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"> root@ubuntu:~# cat /proc/asound/cards</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> 0 [hobotsnd6      ]: hobotsnd6 - hobotsnd6</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                      hobotsnd6</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
-<p id="pf-58">若能看到类似“ hobotsnd6 ”的条目，说明声卡已被识别。</p>
+<p id="pf-56">若能看到类似“ hobotsnd6 ”的条目，说明声卡已被识别。</p>
 </li>
-<li id="pf-59">
-<p id="pf-60">查看声卡下的功能设备：</p>
+<li id="pf-57">
+<p id="pf-58">查看声卡下的功能设备：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">cat /proc/asound/devices</span><br></span></code></pre></div></div>
-<p id="pf-61">输出示例：</p>
+<p id="pf-59">输出示例：</p>
 <div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">root@ubuntu:~# cat /proc/asound/devices</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    2: [ 0]   : control</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    3: [ 0- 0]: digital audio playback</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    4: [ 0- 0]: digital audio capture</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    5: [ 0- 1]: digital audio playback</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    6: [ 0- 1]: digital audio capture</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    33:        : timer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
 </li>
 </ul>
-<div class="tabs-container tabList__CuJ"><ul role="tablist" aria-orientation="horizontal" class="tabs"><li role="tab" tabindex="0" aria-selected="true" class="tabs__item tabItem_LNqP tabs__item--active" id="pf-62">RDK-X3-PI</li><li role="tab" tabindex="-1" aria-selected="false" class="tabs__item tabItem_LNqP" id="pf-63">RDK-X3-Module</li></ul><div class="margin-top--md"><div role="tabpanel" class="tabItem_Ymn6"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-64">2. 录音操作<a href="#2-录音操作" class="hash-link" aria-label="2. 录音操作的直接链接" title="2. 录音操作的直接链接">​</a></h3><ul>
-<li id="pf-65">
-<p id="pf-66"><strong>2通道麦克风录音</strong><br>
+<div class="doc-scope" data-doc-scope="{&quot;versions&quot;:[{&quot;operator&quot;:&quot;>=&quot;,&quot;version&quot;:&quot;3.0.0&quot;}],&quot;products&quot;:[&quot;RDK X3&quot;]}"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-60">2. 录音操作<a href="#2-录音操作" class="hash-link" aria-label="2. 录音操作的直接链接" title="2. 录音操作的直接链接">​</a></h3><ul>
+<li id="pf-61">
+<p id="pf-62"><strong>2通道麦克风录音</strong><br>
 <!-- -->使用 tinycap 录制 2 通道音频：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">tinycap ./2chn_test.wav -D 0 -d 0 -c 2 -b 16 -r 48000 -p 512 -n 4 -t 5</span><br></span></code></pre></div></div>
 </li>
-</ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-67">3. 播放操作<a href="#3-播放操作" class="hash-link" aria-label="3. 播放操作的直接链接" title="3. 播放操作的直接链接">​</a></h3><ul>
-<li id="pf-68">
-<p id="pf-69"><strong>双通道音频播放</strong><br>
+</ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-63">3. 播放操作<a href="#3-播放操作" class="hash-link" aria-label="3. 播放操作的直接链接" title="3. 播放操作的直接链接">​</a></h3><ul>
+<li id="pf-64">
+<p id="pf-65"><strong>双通道音频播放</strong><br>
 <!-- -->使用 tinyplay 播放录制好的音频文件，常用参数如下：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">tinyplay ./2chn_test.wav -D 0 -d 1</span><br></span></code></pre></div></div>
 </li>
-</ul></div><div role="tabpanel" class="tabItem_Ymn6" hidden=""><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-70">2. 录音操作<a href="#2-录音操作-1" class="hash-link" aria-label="2. 录音操作的直接链接" title="2. 录音操作的直接链接">​</a></h3><ul>
-<li id="pf-71">
-<p id="pf-72"><strong>2通道麦克风录音</strong><br>
+</ul></div>
+<div class="doc-scope" data-doc-scope="{&quot;versions&quot;:[{&quot;operator&quot;:&quot;>=&quot;,&quot;version&quot;:&quot;3.0.0&quot;}],&quot;products&quot;:[&quot;RDK X3 Module&quot;]}"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-66">2. 录音操作<a href="#2-录音操作-1" class="hash-link" aria-label="2. 录音操作的直接链接" title="2. 录音操作的直接链接">​</a></h3><ul>
+<li id="pf-67">
+<p id="pf-68"><strong>2通道麦克风录音</strong><br>
 <!-- -->使用 tinycap 录制 2 通道音频：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">tinycap ./2chn_test.wav -D 0 -d 1 -c 2 -b 16 -r 48000 -p 512 -n 4 -t 5</span><br></span></code></pre></div></div>
 </li>
-</ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-73">3. 播放操作<a href="#3-播放操作-1" class="hash-link" aria-label="3. 播放操作的直接链接" title="3. 播放操作的直接链接">​</a></h3><ul>
-<li id="pf-74">
-<p id="pf-75"><strong>双通道音频播放</strong><br>
+</ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pf-69">3. 播放操作<a href="#3-播放操作-1" class="hash-link" aria-label="3. 播放操作的直接链接" title="3. 播放操作的直接链接">​</a></h3><ul>
+<li id="pf-70">
+<p id="pf-71"><strong>双通道音频播放</strong><br>
 <!-- -->使用 tinyplay 播放录制好的音频文件，常用参数如下：</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">tinyplay ./2chn_test.wav -D 0 -d 0</span><br></span></code></pre></div></div>
 </li>
-</ul></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pf-76">常见问题排查<a href="#常见问题排查" class="hash-link" aria-label="常见问题排查的直接链接" title="常见问题排查的直接链接">​</a></h2>
+</ul></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pf-72">常见问题排查<a href="#常见问题排查" class="hash-link" aria-label="常见问题排查的直接链接" title="常见问题排查的直接链接">​</a></h2>
 <ul>
-<li id="pf-77">若未检测到声卡，请检查硬件连接和拨码开关设置是否正确。</li>
-<li id="pf-78">若录音或播放无声，请确认音频文件格式、通道数与命令参数一致。</li>
+<li id="pf-73">若未检测到声卡，请检查硬件连接和拨码开关设置是否正确。</li>
+<li id="pf-74">若录音或播放无声，请确认音频文件格式、通道数与命令参数一致。</li>
 </ul>
-<p id="pf-79">如遇其他问题，可参考 <a href="/rdk_x_doc1/FAQ/multimedia#audio-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"> 音频常见问题 </a> 获取更多帮助。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-12T13:07:53.000Z" itemprop="dateModified">2026年5月12日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/rdk_x_doc1/Basic_Application/audio/rdk_x3_and_rdk_x3_module/audio_driver_hat2_rev2"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">audio_driver_hat2_rev2</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc1/03_Basic_Application/05_audio/rdk_x5"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">RDK X5</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li id="pf-80"><a href="#产品简介" class="table-of-contents__link toc-highlight">产品简介</a></li><li id="pf-81"><a href="#安装方法" class="table-of-contents__link toc-highlight">安装方法</a><ul><li id="pf-82"><a href="#硬件部署" class="table-of-contents__link toc-highlight">硬件部署</a></li><li id="pf-83"><a href="#软件配置" class="table-of-contents__link toc-highlight">软件配置</a></li><li id="pf-84"><a href="#卸载方法" class="table-of-contents__link toc-highlight">卸载方法</a></li></ul></li><li id="pf-85"><a href="#运行" class="table-of-contents__link toc-highlight">运行</a><ul><li id="pf-86"><a href="#1-检查声卡设备" class="table-of-contents__link toc-highlight">1. 检查声卡设备</a></li><li id="pf-87"><a href="#2-录音操作" class="table-of-contents__link toc-highlight">2. 录音操作</a></li><li id="pf-88"><a href="#3-播放操作" class="table-of-contents__link toc-highlight">3. 播放操作</a></li><li id="pf-89"><a href="#2-录音操作-1" class="table-of-contents__link toc-highlight">2. 录音操作</a></li><li id="pf-90"><a href="#3-播放操作-1" class="table-of-contents__link toc-highlight">3. 播放操作</a></li></ul></li><li id="pf-91"><a href="#常见问题排查" class="table-of-contents__link toc-highlight">常见问题排查</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item" id="pf-92"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item" id="pf-93"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item" id="pf-94"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 D-Robotics.</div></div></div></footer></div>
+<p id="pf-75">如遇其他问题，可参考 <a href="/rdk_x_doc1/FAQ/multimedia#audio-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"> 音频常见问题 </a> 获取更多帮助。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-13T05:42:52.000Z" itemprop="dateModified">2026年5月13日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/rdk_x_doc1/Basic_Application/audio/rdk_x3_and_rdk_x3_module/audio_driver_hat2_rev2"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">audio_driver_hat2_rev2</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc1/03_Basic_Application/05_audio/rdk_x5"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">RDK X5</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li id="pf-76"><a href="#产品简介" class="table-of-contents__link toc-highlight">产品简介</a></li><li id="pf-77"><a href="#安装方法" class="table-of-contents__link toc-highlight">安装方法</a><ul><li id="pf-78"><a href="#硬件部署" class="table-of-contents__link toc-highlight">硬件部署</a></li><li id="pf-79"><a href="#软件配置" class="table-of-contents__link toc-highlight">软件配置</a></li><li id="pf-80"><a href="#卸载方法" class="table-of-contents__link toc-highlight">卸载方法</a></li></ul></li><li id="pf-81"><a href="#运行" class="table-of-contents__link toc-highlight">运行</a><ul><li id="pf-82"><a href="#1-检查声卡设备" class="table-of-contents__link toc-highlight">1. 检查声卡设备</a></li><li id="pf-83"><a href="#2-录音操作" class="table-of-contents__link toc-highlight">2. 录音操作</a></li><li id="pf-84"><a href="#3-播放操作" class="table-of-contents__link toc-highlight">3. 播放操作</a></li><li id="pf-85"><a href="#2-录音操作-1" class="table-of-contents__link toc-highlight">2. 录音操作</a></li><li id="pf-86"><a href="#3-播放操作-1" class="table-of-contents__link toc-highlight">3. 播放操作</a></li></ul></li><li id="pf-87"><a href="#常见问题排查" class="table-of-contents__link toc-highlight">常见问题排查</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item" id="pf-88"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item" id="pf-89"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item" id="pf-90"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 D-Robotics.</div></div></div></footer></div>
 
 
     <div hidden="" data-pagefind-body="">
