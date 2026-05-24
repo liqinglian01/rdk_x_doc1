@@ -21,13 +21,11 @@ sudo srpi-config
 
 ![image-20231123101913960](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/02_System_configuration/image/srpi-config/image-20231123101913960.png)
 
-![image-20231123101913960](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/02_System_configuration/image/srpi-config/image-20231123101913960.png)
 
 如果您使用的是桌面系统，那么您可以在菜单中找到`RDK Configuration`应用来进行配置。同样会打开如上图一样的配置终端。
 
 ![image-20231123102024074](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/02_System_configuration/image/srpi-config/20250507-160737.jpg)
 
-![image-20231123172041480](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/02_System_configuration/image/srpi-config/20250507-160809.jpg)
 
 ## System Options
 
@@ -140,7 +138,7 @@ sudo srpi-config
   
   可以使用此工具对的 RDK 的 CPU 进行超频，一般不建议开启，如果做好充分散热工作可以尝试修改此选项。
 
-  `X5系列`有关`CPU`调度方式的说明请查阅 [X5 CPU频率管理](frequency_management#cpu频率管理-1)，若计划进行超频，请务必先阅读文档中`CPU 超频`一节，全面了解风险与注意事项。
+  `X5系列`有关`CPU`调度方式的说明请查阅 [X5 CPU频率管理](./04_frequency_management.md#cpu频率管理-1)，若计划进行超频，请务必先阅读文档中`CPU 超频`一节，全面了解风险与注意事项。
   
   ![image-20231123104553727](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/02_System_configuration/image/srpi-config/image-20231123104553727.png)
 
