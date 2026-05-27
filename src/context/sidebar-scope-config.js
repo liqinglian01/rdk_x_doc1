@@ -1,79 +1,22 @@
 import { scopeProductsMatchCurrent } from './doc-scope-product-utils.js';
+import {
+  lookupDocScopeConfig,
+  normalizeDocIdFromPath,
+} from './doc-scope-id-utils.js';
 import { matchVersion } from './doc-scope-version-utils.js';
 
 /**
  * 侧边栏显示范围配置
- * 仅通过 Front Matter 配置方式控制章节目录展示
- *
- * 支持两种配置方式：
- * 1. 在 Markdown 文件的 Front Matter 中配置（控制单个文档）
- * 2. 在 _sidebar_scope.json 中配置（控制整个文件夹）
- *
- * 使用方式：
- * 
- * 方式1：在 Markdown 文件的 Front Matter 中配置
- * ---
- * sidebar_versions: 3.5.0
- * sidebar_products: RDK X5
- * ---
- * 
- * 或使用版本范围表达式：
- * ---
- * sidebar_versions: ">= 3.0.0"
- * sidebar_products: RDK X5
- * ---
- * 
- * 方式2：在文件夹中创建 _sidebar_scope.json 文件
- * {
- *   "versions": [">= 3.0.0"],
- *   "products": ["RDK X5"]
- * }
- *
- * 配置说明：
- * - versions: 该文档在哪些版本下显示，支持版本范围表达式
- *   - "3.0.0" - 精确匹配
- *   - "> 3.0.0" - 大于 3.0.0
- *   - ">= 3.0.0" - 大于等于 3.0.0
- *   - "< 3.5.0" - 小于 3.5.0
- *   - "<= 3.5.0" - 小于等于 3.5.0
- * - products: 该文档在哪些产品下显示；省略或空数组 [] 表示所有产品都显示；名称与矩阵比对时不区分大小写，多余空格会规整后匹配
- *   - "RDK X5" 精确匹配 RDK X5 手册
- *   - "RDK X5 Module" 精确匹配 RDK X5 Module 手册
- *   - "RDK-X5" 匹配 RDK X5 系列产品，如 RDK X5 / RDK X5 Module / RDK X5 Pro
- * 
- * 注意：不要在 _category_.json 中添加自定义字段，Docusaurus 不支持。
- * 请使用单独的 _sidebar_scope.json 文件。
+ * 由 sidebar-scope-config-plugin 在 build/start 时生成至 .docusaurus/generated-sidebar-config.json
+ * （不进 git；开发时 watch-sidebar-config 也会更新同一文件）
  */
 
-// 从 Front Matter 生成的配置（通过 remark 插件自动生成）
 let generatedFrontmatterConfig = {};
 try {
-  // 尝试加载生成的配置文件
-  const configModule = require('./generated-sidebar-config.json');
+  const configModule = require('@generated/generated-sidebar-config.json');
   generatedFrontmatterConfig = configModule || {};
-} catch (e) {
-  // 配置文件不存在时使用空对象
+} catch {
   generatedFrontmatterConfig = {};
-}
-
-/**
- * 将路径转换为 Docusaurus docId 格式
- * - 转换为小写
- * - 去除数字前缀（如 02_02_02_Quick_start 变成 quick_start）
- * @param {string} path 路径
- * @returns {string} docId 格式的路径
- */
-function normalizeDocId(path) {
-  if (!path) return '';
-  
-  const parts = path.toLowerCase().split('/');
-  
-  const normalizedParts = parts.map(part => {
-    // 去除数字前缀（如 02_02_02_Quick_start -> 02_02_Quick_start）
-    return part.replace(/^\d+_/, '');
-  });
-  
-  return normalizedParts.join('/');
 }
 
 /**
@@ -84,13 +27,13 @@ function normalizeDocId(path) {
  * @returns {boolean} 是否显示
  */
 export function shouldShowDoc(docId, version, product) {
-  const normalizedId = normalizeDocId(docId);
+  const normalizedId = normalizeDocIdFromPath(docId);
 
-  // 1. 先检查文档级别的精确匹配
-  if (generatedFrontmatterConfig[normalizedId]) {
-    const scope = generatedFrontmatterConfig[normalizedId];
-    const vMatch = matchVersion(version, scope.versions);
-    const pMatch = scopeProductsMatchCurrent(scope.products, product);
+  // 1. 文档级匹配：支持文件路径 key 与 front matter id 两种写法
+  const docScope = lookupDocScopeConfig(docId, generatedFrontmatterConfig);
+  if (docScope) {
+    const vMatch = matchVersion(version, docScope.versions);
+    const pMatch = scopeProductsMatchCurrent(docScope.products, product);
     return vMatch && pMatch;
   }
 
@@ -98,7 +41,7 @@ export function shouldShowDoc(docId, version, product) {
   for (const [configPath, scope] of Object.entries(generatedFrontmatterConfig)) {
     if (!scope.isCategory) continue;
     
-    const normalizedConfigPath = normalizeDocId(configPath);
+    const normalizedConfigPath = normalizeDocIdFromPath(configPath);
     
     if (normalizedId.startsWith(normalizedConfigPath + '/') || normalizedId === normalizedConfigPath) {
       const vMatch = matchVersion(version, scope.versions);

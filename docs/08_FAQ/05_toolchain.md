@@ -1009,11 +1009,10 @@ sidebar_position: 5
 
 使用填充的方式对图片中心进行裁剪的操作。
 
-.. attention::
-
+**注意**：
   仅适用于EfficientNet-lite相关实例模型。
 
-  计算方式为：
+ **计算方式为：**
 
   1. 计算系数，int((float( image_size ) / ( image_size + crop_pad ))。
 
@@ -1231,7 +1230,7 @@ YUV_BT601_Video_Range，某些摄像头输入数据都是YUV BT601(Video Range)�
 
 **使用举例**：
 
-``` bash
+```bash
   # layout为 NCHW时，做BGR转成YUV_BT601_Video_Range
   BGR2YUVBT601VIDEOTransformer(data_format='CHW')
 
@@ -1682,7 +1681,7 @@ hb_model_verifier工具（详细介绍可参考）的使用方法，请参考PTQ
 
 ##### RDK X3 Caffe模型量化yaml文件模板{#rdk_x3_caffe_yaml_template}
 
-请新建 caffe_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](https://developer.d-robotics.cc/rdk_doc/Advanced_development/toolchain_development/intermediate/ptq_process#model_conversion) 章节内容。
+请新建 caffe_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](../07_Advanced_development/04_toolchain_development/intermediate/ptq_process.md#model_conversion) 章节内容。
 
 ```python
 
@@ -1764,7 +1763,7 @@ compiler_parameters:
 
 ##### RDK X3 ONNX模型量化yaml文件模板{#rdk_x3_onnx_yaml_template}
 
-请新建 onnx_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](https://developer.d-robotics.cc/rdk_doc/Advanced_development/toolchain_development/intermediate/ptq_process#model_conversion)章节内容。
+请新建 onnx_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](../07_Advanced_development/04_toolchain_development/intermediate/ptq_process.md#model_conversion)章节内容。
 
 ```python
 
@@ -1842,8 +1841,7 @@ compiler_parameters:
 
 ##### RDK X5 Caffe模型量化yaml文件模板{#rdk_x5_caffe_yaml_template}
 
-请新建 caffe_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考  [yaml配置文件详解](https://developer.d-robotics.cc/rdk_doc/Advanced_development/toolchain_development/intermediate/ptq_process#model_conversion)章节内容。
-
+请新建 caffe_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考  [yaml配置文件详解](../07_Advanced_development/04_toolchain_development/intermediate/ptq_process.md#model_conversion)
 ```python
 
 # Copyright (c) 2020 D-Robotics.All Rights Reserved.
@@ -1924,7 +1922,7 @@ compiler_parameters:
 
 ##### RDK X5 ONNX模型量化yaml文件模板{#rdk_x5_onnx_yaml_template}
 
-请新建 onnx_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](https://developer.d-robotics.cc/rdk_doc/Advanced_development/toolchain_development/intermediate/ptq_process#model_conversion) 章节内容。
+请新建 onnx_config.yaml 文件，并直接拷贝以下内容，然后只需填写标记为 **``必选参数``** 的参数即可进行模型转换，若需了解更多参数的使用说明，可参考 [yaml配置文件详解](../07_Advanced_development/04_toolchain_development/intermediate/ptq_process.md#model_conversion) 章节内容。
 
 ```python
 

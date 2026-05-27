@@ -18,6 +18,8 @@ sidebar_position: 1
 | sp_vio_close | **关闭摄像头** |
 | sp_vio_get_frame | **获取视频图像帧** |
 | sp_vio_set_frame | **发送视频图像帧给vps模块** |
+| sp_vio_get_raw | **获取摄像头raw图数据** |
+| sp_vio_get_yuv | **获取摄像头ISP模块的YUV数据** | 
 
 
 ## sp_init_vio_module  
@@ -172,7 +174,7 @@ sidebar_position: 1
 
 :::
 
-`X3`芯片`VPS`尺寸限制可以参考[视频处理-功能描述](https://developer.d-robotics.cc/rdk_doc/Advanced_development/multimedia_development/video_processing)。
+`X3`芯片`VPS`尺寸限制可以参考[视频处理-功能描述](../../../../07_Advanced_development/03_multimedia_development/video_processing.md)。
 
 `X5`芯片`VPS`通道特性如下：
 

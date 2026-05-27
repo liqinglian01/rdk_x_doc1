@@ -66,6 +66,16 @@ ion=ion_carveout_size=0x14000000
 ion=ion_cma_size=0x08000000
 ```
 
+The size of each ION region can be viewed by checking the boot information:
+
+```Shell
+root@ubuntu:~# dmesg | grep "Reserved ion"
+[    0.207939] Reserved ion-pool MEM start 0xa4100000, size 0x14000000
+[    0.207964] Reserved ion-carveout MEM start 0xb8100000, size 0x14000000
+[    0.208068] Reserved ion-cma MEM start 0xcc100000, size 0x8000000
+```
+
+
 ### dtparam
 
 Supports enabling and disabling buses such as uart, i2c, spi, i2s, etc.
@@ -153,7 +163,7 @@ This section only introduces the configuration method via `config.txt` and does 
 When set to `1`, overclocking is enabled, increasing the maximum frequency of the RDK X5 to 1.8GHz. You can check which higher CPU frequencies are enabled after boosting by running:
 
 ```bash
-cat /sys/devices/system/cpu/cpufreq/policy0/scaling_boost_frequencies
+arm_boost=1
 
 ```  
 ### governor

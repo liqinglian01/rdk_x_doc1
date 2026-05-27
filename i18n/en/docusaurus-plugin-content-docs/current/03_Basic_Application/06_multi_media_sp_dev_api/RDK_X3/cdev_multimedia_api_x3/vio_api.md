@@ -17,6 +17,8 @@ The `VIO` API provides the following interfaces:
 | sp_vio_close | **Close the camera** |
 | sp_vio_get_frame | **Get video frame** |
 | sp_vio_set_frame | **Send video frame to VPS module** |
+| sp_vio_get_raw | **Get camera raw image data** |
+| sp_vio_get_yuv | **Get camera ISP module YUV data** |
 
 
 ## sp_init_vio_module  
@@ -168,7 +170,7 @@ The `X3` chip has alignment requirements for the width of `VPS` output. If the w
 :::
 
 
-For the size limitations of the VPS on the `X3` chip, please refer to [Video Processing - Feature Description](https://developer.d-robotics.cc/rdk_doc/en/Advanced_development/multimedia_development/video_processing).  
+For the size limitations of the VPS on the `X3` chip, please refer to [Video Processing - Feature Description](../../../../07_Advanced_development/03_multimedia_development/video_processing.md).  
 
 The `X5` chip's VPS channel characteristics are as follows:  
 
