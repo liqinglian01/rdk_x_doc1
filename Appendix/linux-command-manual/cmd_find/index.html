@@ -8,8 +8,8 @@
 <script src="https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e" async></script>
 <script src="/rdk_x_doc/static/js/dify-config.js"></script>
 <script src="https://rdk.d-robotics.cc/embed.min.js" id="rJYrxmxmjOkjEx2c" defer="defer"></script><link rel="stylesheet" href="/rdk_x_doc/assets/css/styles.dd688163.css">
-<script src="/rdk_x_doc/assets/js/runtime~main.e7a6c26e.js" defer="defer"></script>
-<script src="/rdk_x_doc/assets/js/main.9ac28964.js" defer="defer"></script>
+<script src="/rdk_x_doc/assets/js/runtime~main.d6269078.js" defer="defer"></script>
+<script src="/rdk_x_doc/assets/js/main.ef44a169.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -46,9 +46,9 @@
 <p>例如：<strong>-mtime 0</strong> 表示查找今天修改过的文件，<strong>-mtime -7</strong> 表示查找一周以前修改过的文件。</p>
 <p>关于时间 n 参数的说明：</p>
 <ul>
-<li><strong>+n</strong>：查找比 n 天前更早的文件或目录。</li>
-<li><strong>-n</strong>：查找在 n 天内更改过属性的文件或目录。</li>
-<li><strong>n</strong>：查找在 n 天前（指定那一天）更改过属性的文件或目录。</li>
+<li><code>+n</code>：查找比 n 天前更早的文件或目录。</li>
+<li><code>-n</code>：查找在 n 天内更改过属性的文件或目录。</li>
+<li><code>n</code>：查找在 n 天前（指定那一天）更改过属性的文件或目录。</li>
 </ul>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="常用命令">常用命令<a href="#常用命令" class="hash-link" aria-label="常用命令的直接链接" title="常用命令的直接链接">​</a></h2>
 <p>列出当前目录及子目录下所有文件和文件夹</p>
@@ -72,22 +72,22 @@
 <p>文件大小单元：</p>
 <ul>
 <li>
-<p><strong>b</strong> —— 块（512字节）</p>
+<p><code>b</code> —— 块（512字节）</p>
 </li>
 <li>
-<p><strong>c</strong> —— 字节</p>
+<p><code>c</code> —— 字节</p>
 </li>
 <li>
-<p><strong>w</strong> —— 字（2字节）</p>
+<p><code>w</code> —— 字（2字节）</p>
 </li>
 <li>
-<p><strong>k</strong> —— 千字节</p>
+<p><code>k</code> —— 千字节</p>
 </li>
 <li>
-<p><strong>M</strong> —— 兆字节</p>
+<p><code>M</code> —— 兆字节</p>
 </li>
 <li>
-<p><strong>G</strong> —— 吉字节</p>
+<p><code>G</code> —— 吉字节</p>
 </li>
 </ul>
 </li>
@@ -121,13 +121,13 @@
 <ul>
 <li>类型参数列表：<!-- -->
 <ul>
-<li><strong>f</strong> 普通文件</li>
-<li><strong>l</strong> 符号连接</li>
-<li><strong>d</strong> 目录</li>
-<li><strong>c</strong> 字符设备</li>
-<li><strong>b</strong> 块设备</li>
-<li><strong>s</strong> 套接字</li>
-<li><strong>p</strong> Fifo</li>
+<li><code>f</code> 普通文件</li>
+<li><code>l</code> 符号连接</li>
+<li><code>d</code> 目录</li>
+<li><code>c</code> 字符设备</li>
+<li><code>b</code> 块设备</li>
+<li><code>s</code> 套接字</li>
+<li><code>p</code> Fifo</li>
 </ul>
 </li>
 </ul>
@@ -139,7 +139,7 @@
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find . -type f -name &quot;*.log&quot; -delete</span><br></span></code></pre></div></div>
 <p>当前目录下搜索出权限为777的文件</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find . -type f -perm 777</span><br></span></code></pre></div></div>
-<p>找出当前目录下权限不是644的<code>.conf</code>文件</p>
+<p>找出当前目录下权限不是644的<code>.conf</code>  文件</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find . -type f -name &quot;*.conf&quot; ! -perm 644</span><br></span></code></pre></div></div>
 <p>找出当前目录用户<code>sunrise</code>拥有的所有文件</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find . -type f -user sunrise</span><br></span></code></pre></div></div>
@@ -168,6 +168,6 @@
 <p>统计代码行数</p>
 <div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find . -name &quot;*.c&quot;|xargs cat|grep -v ^$|wc -l # 代码行数统计, 排除空行</span><br></span></code></pre></div></div>
 <p>其它实例</p>
-<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find ~ -name &#x27;*jpg&#x27; # 主目录中找到所有的 jpg 文件。 -name 参数允许你将结果限制为与给定模式匹配的文件。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ -iname &#x27;*jpg&#x27; # -iname 就像 -name，但是不区分大小写</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ ( -iname &#x27;jpeg&#x27; -o -iname &#x27;jpg&#x27; ) # 一些图片可能是 .jpeg 扩展名。幸运的是，我们可以将模式用“或”（表示为 -o）来组合。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ \( -iname &#x27;*jpeg&#x27; -o -iname &#x27;*jpg&#x27; \) -type f # 如果你有一些以 jpg 结尾的目录呢？ （为什么你要命名一个 bucketofjpg 而不是 pictures 的目录就超出了本文的范围。）我们使用 -type 参数修改我们的命令来查找文件。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ \( -iname &#x27;*jpeg&#x27; -o -iname &#x27;*jpg&#x27; \) -type d # 也许你想找到那些命名奇怪的目录，以便稍后重命名它们</span><br></span></code></pre></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-24T17:59:57.000Z" itemprop="dateModified">2026年5月24日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/rdk_x_doc/Appendix/linux-command-manual/cmd_dpkg"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">dpkg</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc/Appendix/linux-command-manual/cmd_grep"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">grep</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#语法说明" class="table-of-contents__link toc-highlight">语法说明</a></li><li><a href="#选项说明" class="table-of-contents__link toc-highlight">选项说明</a></li><li><a href="#常用命令" class="table-of-contents__link toc-highlight">常用命令</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 D-Robotics.</div></div></div></footer></div>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">find ~ -name &#x27;*jpg&#x27; # 主目录中找到所有的 jpg 文件。 -name 参数允许你将结果限制为与给定模式匹配的文件。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ -iname &#x27;*jpg&#x27; # -iname 就像 -name，但是不区分大小写</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ ( -iname &#x27;jpeg&#x27; -o -iname &#x27;jpg&#x27; ) # 一些图片可能是 .jpeg 扩展名。幸运的是，我们可以将模式用“或”（表示为 -o）来组合。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ \( -iname &#x27;*jpeg&#x27; -o -iname &#x27;*jpg&#x27; \) -type f # 如果你有一些以 jpg 结尾的目录呢？ （为什么你要命名一个 bucketofjpg 而不是 pictures 的目录就超出了本文的范围。）我们使用 -type 参数修改我们的命令来查找文件。</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">find ~ \( -iname &#x27;*jpeg&#x27; -o -iname &#x27;*jpg&#x27; \) -type d # 也许你想找到那些命名奇怪的目录，以便稍后重命名它们</span><br></span></code></pre></div></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-27T22:34:18.000Z" itemprop="dateModified">2026年5月27日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--prev" href="/rdk_x_doc/Appendix/linux-command-manual/cmd_dpkg"><div class="pagination-nav__sublabel">上一页</div><div class="pagination-nav__label">dpkg</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc/Appendix/linux-command-manual/cmd_grep"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">grep</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#语法说明" class="table-of-contents__link toc-highlight">语法说明</a></li><li><a href="#选项说明" class="table-of-contents__link toc-highlight">选项说明</a></li><li><a href="#常用命令" class="table-of-contents__link toc-highlight">常用命令</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024-2026 D-Robotics.</div></div></div></footer></div>
 </body>
 </html>

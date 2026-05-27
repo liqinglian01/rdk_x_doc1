@@ -8,8 +8,8 @@
 <script src="https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e" async></script>
 <script src="/rdk_x_doc/static/js/dify-config.js"></script>
 <script src="https://rdk.d-robotics.cc/embed.min.js" id="rJYrxmxmjOkjEx2c" defer="defer"></script><link rel="stylesheet" href="/rdk_x_doc/assets/css/styles.dd688163.css">
-<script src="/rdk_x_doc/assets/js/runtime~main.e7a6c26e.js" defer="defer"></script>
-<script src="/rdk_x_doc/assets/js/main.9ac28964.js" defer="defer"></script>
+<script src="/rdk_x_doc/assets/js/runtime~main.d6269078.js" defer="defer"></script>
+<script src="/rdk_x_doc/assets/js/main.ef44a169.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"><defs>
@@ -28,7 +28,7 @@
 <a href="https://developer.d-robotics.cc/api/v1/static/fileData/X3%E6%B4%BE%E8%B5%84%E6%96%99%E5%8C%85_20220711175326.zip" target="_blank" rel="noopener noreferrer">旭日X3派资料包</a><br></p>
 </li>
 <li>
-<p><strong>RDK X3 Module</strong>出厂已经烧写测试版本系统镜像，为确保使用最新版本的系统，建议参考本文档完成<strong>系统烧录</strong>章节。</p>
+<p><strong>RDK X3 Module</strong>出厂已经烧写测试版本系统镜像，为确保使用最新版本的系统，建议参考本文档完成<a href="/rdk_x_doc/install_os">系统烧录</a>章节。</p>
 </li>
 </ul><p>用户如需确认系统版本号，可通过该命令查询 <code>cat /etc/version</code>, 2.1.0 及以上版本可以通过 <code>rdkos_info</code> 命令查看具体的版本信息。</p></div></div>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="d-robotics-rdk-套件概述">D-Robotics RDK 套件概述<a href="#d-robotics-rdk-套件概述" class="hash-link" aria-label="D-Robotics RDK 套件概述的直接链接" title="D-Robotics RDK 套件概述的直接链接">​</a></h2>
@@ -45,7 +45,7 @@
 <p><strong>RDK X3（旭日X3派）</strong> 是一款全功能开发板，具有 5Tops 端侧推理算力。通过搭配丰富的传感器和扩展组件，为开发者提供了灵活的硬件扩展和连接选项。</p>
 <p><strong>RDK X3 Module（旭日X3模组）</strong> 是一款紧凑型核心模组，与 RDK X3 保持了同等规格，尺寸和接口兼容树莓派 CM4 模组。通过搭配扩展板，可以为各种应用场景提供高效的计算和通信能力。</p>
 <p><strong>RDK X5</strong> 是一款全功能开发板，具有 10Tops 端侧推理算力与 8 核 ARM A55 处理能力，支持 2 路 MIPI Camera 接入，4 路 USB3.0 接口。通过搭配丰富的传感器和扩展组件，为开发者提供了灵活的硬件扩展和连接选项。</p>
-<p><img decoding="async" loading="lazy" src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/image-rdk-serials.jpg" alt="image-rdk-serials" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" src="https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/image-rdk-serials1.jpg" alt="image-rdk-serials" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="工作温度与散热建议">工作温度与散热建议<a href="#工作温度与散热建议" class="hash-link" aria-label="工作温度与散热建议的直接链接" title="工作温度与散热建议的直接链接">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="工作温度范围">工作温度范围<a href="#工作温度范围" class="hash-link" aria-label="工作温度范围的直接链接" title="工作温度范围的直接链接">​</a></h4>
 <ul>
@@ -67,7 +67,7 @@
 <p><strong>一、快速开始</strong><br>
 <!-- -->介绍系统安装，硬件接口使用的入门说明，帮助用户快速上手使用开发板。</p>
 <p><strong>二、系统配置</strong><br>
-<!-- -->介绍一系列配置步骤和技巧，以确保系统能够正常工作并满足特定的需求，引导用户进行系统的配置，包括系统升级、网络、蓝牙的配置。</p>
+<!-- -->介绍一系列配置步骤和技巧，以确保系统能够正常工作并满足特定的需求，引导用户进行系统的配置，包括系统 升级、网络、蓝牙的配置。</p>
 <p><strong>三、基础应用开发</strong><br>
 <!-- -->介绍系统中预装的功能示例，如 IO 管脚控制、音视频采集，多媒体初步使用等。</p>
 <p><strong>四、算法应用开发</strong><br>
@@ -138,7 +138,7 @@
 <li>hobot_codec 优化： 优化了图像编解码模块配置，删除了无效参数，并新增用于 Debug 的配置项。</li>
 </ul><h4 class="anchor anchorWithStickyNavbar_LWe7" id="tros算法升级-243--版本号333">TROS算法升级 2.4.3 &amp; 版本号：3.3.3<a href="#tros算法升级-243--版本号333" class="hash-link" aria-label="TROS算法升级 2.4.3 &amp; 版本号：3.3.3的直接链接" title="TROS算法升级 2.4.3 &amp; 版本号：3.3.3的直接链接">​</a></h4><ul>
 <li>新增 御光-SC132GS 双目摄像头模组驱动</li>
-<li>srpi-config 功能增强：支持接口  自动管脚复用，新增 MIPI 屏幕选择</li>
+<li>srpi-config 功能  增强：支持接口自动管脚复用，新增 MIPI 屏幕选择</li>
 <li>GPU 桌面稳定性提升</li>
 <li>Wi-Fi 驱动升级至 2025_0410，提升无线稳定性</li>
 <li>闪连接口增强：</li>
@@ -189,7 +189,7 @@
 <li><strong>语音能力增强</strong> 新增 ASR 语音识别方案，语音算法开发更高效。</li>
 <li><strong>双目深度算法升级</strong> 深度估计算法优化，检测速度与精度全面提升。</li>
 <li><strong>多模态示例集成</strong> 内置端侧大模型多模态示例，3 分钟快速构建自定义应用方案。</li>
-</ul><h4 class="anchor anchorWithStickyNavbar_LWe7" id="双目算法升级--版本号311">双目算法升级 &amp; 版本号：3.1.1<a href="#双目算法升级--版本号311" class="hash-link" aria-label="双目算法升级 &amp; 版本号：3.1.1的直接链接" title="双目算法升级 &amp; 版本号：3.1.1的直接链接">​</a></h4><p><strong>核心功能亮点：</strong></p><ul>
+</ul><h4 class="anchor anchorWithStickyNavbar_LWe7" id="双目算法升级--版本号311">双目算法升级 &amp; 版本号：3.1.1<a href="#双目算法升级--版本号311" class="hash-link" aria-label="双目算法升级 &amp; 版本号  ：3.1.1的直接链接" title="双目算法升级 &amp; 版本号：3.1.1的直接链接">​</a></h4><p><strong>核心功能亮点：</strong></p><ul>
 <li><strong>系统备份</strong> 全新 rdk-backup 工具，一键备份当前系统，轻松生成可烧录镜像。<a href="/rdk_x_doc/Appendix/rdk-command-manual/cmd_rdk-backup">rdk-backup介绍</a>。</li>
 <li><strong>配置管理</strong> 支持使用 config.txt 配置 40pin 引脚在 U-Boot 阶段的初始化状态，提升系统启动稳定性。</li>
 <li><strong>触摸屏增强</strong> 新增双击和长按操作，长按模拟右键，屏幕控制更加灵活。</li>
@@ -252,11 +252,11 @@
 </ul><p>支持RDK X3 Module：</p><ul>
 <li>我们引入了全新的核心板开发者套件，RDK X3 Module。</li>
 <li>RDK X3 Module拥有更小的尺寸，并兼容树莓派CM4接口。</li>
-<li>开发者可以根据需求选择适配的第三方载板，从而扩展核心板的 功能和应用场景。</li>
+<li>开发者可以根据需求选择适配的第三方载板，  从而扩展核心板的功能和应用场景。</li>
 </ul><p>其他更新：</p><ul>
 <li>我们对已有功能进行了优化，修复了已知问题和漏洞，提升了操作系统的稳定性和性能。</li>
 <li>修订了文档和帮助文档，提供更全面、准确的技术资料和指南。</li>
 <li>我们提供了更低层的API，方便开发者进行二次开发和集成，使其能够更加灵活地定制软件。</li>
-</ul></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-24T17:59:57.000Z" itemprop="dateModified">2026年5月24日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc/Quick_start/hardware_introduction/rdk_x3"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">1.1 硬件简介</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#d-robotics-rdk-套件概述" class="table-of-contents__link toc-highlight">D-Robotics RDK 套件概述</a></li><li><a href="#产品介绍" class="table-of-contents__link toc-highlight">产品介绍</a><ul><li><a href="#工作温度与散热建议" class="table-of-contents__link toc-highlight">工作温度与散热建议</a><ul><li><a href="#工作温度范围" class="table-of-contents__link toc-highlight">工作温度范围</a></li><li><a href="#芯片热特性" class="table-of-contents__link toc-highlight">芯片热特性</a></li><li><a href="#散热设计建议" class="table-of-contents__link toc-highlight">散热设计建议</a></li></ul></li></ul></li><li><a href="#文档使用指引" class="table-of-contents__link toc-highlight">文档使用指引</a></li><li><a href="#生态项目对接支持" class="table-of-contents__link toc-highlight">生态项目对接支持</a></li><li><a href="#版本发布记录" class="table-of-contents__link toc-highlight">版本发布记录</a><ul><li><a href="#rdk-x5" class="table-of-contents__link toc-highlight">RDK X5</a><ul><li><a href="#版本号341" class="table-of-contents__link toc-highlight">版本号：3.4.1</a></li><li><a href="#tros算法升级-243--版本号333" class="table-of-contents__link toc-highlight">TROS算法升级 2.4.3 &amp; 版本号：3.3.3</a></li><li><a href="#版本号331" class="table-of-contents__link toc-highlight">版本号：3.3.1</a></li><li><a href="#tros算法升级--版本号323" class="table-of-contents__link toc-highlight">TROS算法升级 &amp; 版本号：3.2.3</a></li><li><a href="#双目算法升级--版本号311" class="table-of-contents__link toc-highlight">双目算法升级 &amp; 版本号：3.1.1</a></li><li><a href="#版本号310" class="table-of-contents__link toc-highlight">版本号：3.1.0</a></li><li><a href="#版本号301" class="table-of-contents__link toc-highlight">版本号：3.0.1</a></li><li><a href="#版本号300" class="table-of-contents__link toc-highlight">版本号：3.0.0</a></li></ul></li><li><a href="#rdk-x3" class="table-of-contents__link toc-highlight">RDK X3</a><ul><li><a href="#版本号300-1" class="table-of-contents__link toc-highlight">版本号：3.0.0</a></li><li><a href="#版本号210" class="table-of-contents__link toc-highlight">版本号：2.1.0</a></li><li><a href="#版本号200" class="table-of-contents__link toc-highlight">版本号：2.0.0</a></li></ul></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 D-Robotics.</div></div></div></footer></div>
+</ul></div></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"></div><div class="col lastUpdated_JAkA"><span class="theme-last-updated">最后<!-- -->于 <b><time datetime="2026-05-27T22:34:18.000Z" itemprop="dateModified">2026年5月27日</time></b> <!-- -->更新</span></div></div></footer></article><nav class="pagination-nav" aria-label="文件选项卡"><a class="pagination-nav__link pagination-nav__link--next" href="/rdk_x_doc/Quick_start/hardware_introduction/rdk_x3"><div class="pagination-nav__sublabel">下一页</div><div class="pagination-nav__label">1.1 硬件简介</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#d-robotics-rdk-套件概述" class="table-of-contents__link toc-highlight">D-Robotics RDK 套件概述</a></li><li><a href="#产品介绍" class="table-of-contents__link toc-highlight">产品介绍</a><ul><li><a href="#工作温度与散热建议" class="table-of-contents__link toc-highlight">工作温度与散热建议</a><ul><li><a href="#工作温度范围" class="table-of-contents__link toc-highlight">工作温度范围</a></li><li><a href="#芯片热特性" class="table-of-contents__link toc-highlight">芯片热特性</a></li><li><a href="#散热设计建议" class="table-of-contents__link toc-highlight">散热设计建议</a></li></ul></li></ul></li><li><a href="#文档使用指引" class="table-of-contents__link toc-highlight">文档使用指引</a></li><li><a href="#生态项目对接支持" class="table-of-contents__link toc-highlight">生态项目对接支持</a></li><li><a href="#版本发布记录" class="table-of-contents__link toc-highlight">版本发布记录</a><ul><li><a href="#rdk-x5" class="table-of-contents__link toc-highlight">RDK X5</a><ul><li><a href="#版本号341" class="table-of-contents__link toc-highlight">版本号：3.4.1</a></li><li><a href="#tros算法升级-243--版本号333" class="table-of-contents__link toc-highlight">TROS算法升级 2.4.3 &amp; 版本号：3.3.3</a></li><li><a href="#版本号331" class="table-of-contents__link toc-highlight">版本号：3.3.1</a></li><li><a href="#tros算法升级--版本号323" class="table-of-contents__link toc-highlight">TROS算法升级 &amp; 版本号：3.2.3</a></li><li><a href="#双目算法升级--版本号311" class="table-of-contents__link toc-highlight">双目算法升级 &amp; 版本号：3.1.1</a></li><li><a href="#版本号310" class="table-of-contents__link toc-highlight">版本号：3.1.0</a></li><li><a href="#版本号301" class="table-of-contents__link toc-highlight">版本号：3.0.1</a></li><li><a href="#版本号300" class="table-of-contents__link toc-highlight">版本号：3.0.0</a></li></ul></li><li><a href="#rdk-x3" class="table-of-contents__link toc-highlight">RDK X3</a><ul><li><a href="#版本号300-1" class="table-of-contents__link toc-highlight">版本号：3.0.0</a></li><li><a href="#版本号210" class="table-of-contents__link toc-highlight">版本号：2.1.0</a></li><li><a href="#版本号200" class="table-of-contents__link toc-highlight">版本号：2.0.0</a></li></ul></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">友情链接</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.guyuehome.com/" target="_blank" rel="noopener noreferrer" class="footer__link-item">古月居<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">联系我们</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/D-Robotics" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://space.bilibili.com/437998606" target="_blank" rel="noopener noreferrer" class="footer__link-item">BiLiBiLi<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024-2026 D-Robotics.</div></div></div></footer></div>
 </body>
 </html>
